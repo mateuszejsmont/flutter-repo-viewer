@@ -1,16 +1,8 @@
-# repo_viewer
+# Repo Viewer
 
-A new Flutter project.
+A Flutter mobile app for viewing Github repositories.
 
-## Getting Started
+## Information
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The app is developed using the Domain Driven Design architecture principles.
+There is as few API calls as possible and all the data is cached, so that the app can work perfectly fine even with limited internet access.
