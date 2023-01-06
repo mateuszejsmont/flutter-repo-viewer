@@ -10,9 +10,13 @@ import 'package:repo_viewer/splash/presentation/splash_page.dart';
 final initializationProvider = FutureProvider((ref) async {
   await ref.read(sembastProvider).init();
   ref.read(dioProvider)
-    ..options = BaseOptions(headers: {
-      'Accept': 'application/vnd.github.v3.html+json',
-    })
+    ..options = BaseOptions(
+      headers: {
+        'Accept': 'application/vnd.github.v3.html+json',
+      },
+      validateStatus: (status) =>
+          status != null && status >= 200 && status < 400,
+    )
     ..interceptors.add(ref.read(oAuth2InterceptorProvider));
   final authNotifier = ref.read(authNotifierProvider.notifier);
   await authNotifier.checkAndUpdateAuthStatus();
