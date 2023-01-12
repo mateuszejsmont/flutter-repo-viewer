@@ -29,9 +29,7 @@ class _AuthorizationPageState extends State<AuthorizationPage> {
     super.initState();
     if (!requestStartedLoading) {
       widget._controller.loadRequest(widget.authorizationUrl);
-      setState(() {
-        requestStartedLoading = true;
-      });
+      requestStartedLoading = true;
     }
   }
 

@@ -135,9 +135,7 @@ class _RepoDetailPageState extends ConsumerState<RepoDetailPage> {
                 mimeType: 'text/html',
                 encoding: utf8,
               ));
-              setState(() {
-                requestStartedLoading = true;
-              });
+              requestStartedLoading = true;
             }
 
             if (_.repoDetail.entity == null) {
